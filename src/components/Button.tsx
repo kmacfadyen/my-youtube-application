@@ -1,4 +1,6 @@
 import { cva, VariantProps } from "class-variance-authority";
+import { ComponentProps } from "react";
+import { twMerge } from "tailwind-merge";
 
 const buttonStyles = cva(["transition-colors"], {
     variants: {
@@ -18,11 +20,16 @@ const buttonStyles = cva(["transition-colors"], {
                 "p-2.5"
             ]
         }
+    },
+    defaultVariants: {
+        variant: "default",
+        size: "default"
     }
 })
 
-type ButtonProps = VariantProps<typeof buttonStyles>
+type ButtonProps = VariantProps<typeof buttonStyles> & ComponentProps<"button">
 
-export function Button ({ variant, size }: ButtonProps) {
-    return <button className={buttonStyles({ variant, size })}/>
+export function Button ({ variant, size, className, ...props }: ButtonProps) {
+    return <button {...props} className={twMerge(buttonStyles({ variant, size }), className)}
+    />
 }
