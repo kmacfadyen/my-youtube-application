@@ -1,9 +1,9 @@
 import logo from "../assets/Logo.png";
-import { Menu } from "lucide-react";
+import { Bell, Menu, Upload, User, Mic } from "lucide-react";
 import { Button } from "../components/Button";
 
 export function PageHeader () {
-    return <div className="flex gap-10 lg:gap-20 justify-between">
+    return <div className="flex gap-10 lg:gap-20 justify-between pt-2 mb-6 mx-4">
         <div className="flex gap-4 items-center flex-shrink-0">
             <Button variant="ghost" size="icon" >
                 <Menu />
@@ -12,7 +12,24 @@ export function PageHeader () {
                 <img src={logo} className="h-6" />
             </a>
         </div>
-        <div></div>
-        <div></div>
+        <form className="flex gap-4 flex-grow justify-center">
+            <div>
+
+            </div>
+            <Button size="icon">
+                <Mic />
+            </Button>
+        </form>
+        <div className="flex flex-shrink-0 md:gap-2">
+            <Button size="icon" variant="ghost">
+                <Upload />
+            </Button>
+            <Button size="icon" variant="ghost">
+                <Bell />
+            </Button>
+            <Button size="icon" variant="ghost">
+                <User />
+            </Button>
+        </div>
     </div>
 }
