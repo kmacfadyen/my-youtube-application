@@ -13,14 +13,15 @@ export function PageHeader () {
             </a>
         </div>
         <form className="flex gap-4 flex-grow justify-center">
-            <div className="flex flex-grow max-w-[600]">
+            <div className="flex flex-grow max-w-[600px]">
                 <input 
                 type="search" 
                 placeholder="Search" 
                 className="rounded-l-full border border-secondary-border
                 shadow-inner shadow-secondary py-1 px-4 text-lg w-full
                 focus:border-blue-500 outline-none" />
-                <Button>
+                <Button className="py-2 px-4 rounded-r-full border-secondary-border
+                border border-l-0 flex-shrink-0">
                     <Search />
                 </Button>
             </div>
