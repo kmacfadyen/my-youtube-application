@@ -13,5 +13,5 @@ export const categories = [
     "Frontend Web Development",
     "Backend Web Development",
     "Web Development",
-    "Coding",
+    "Coding Practice",
 ]
